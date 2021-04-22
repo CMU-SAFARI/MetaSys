@@ -1,0 +1,22 @@
+/* For copyright information, see olden_v1.0/COPYRIGHT */
+
+/* util.h
+ *
+ * headers for randomizing utilities 
+ *
+ * By: Martin C. Carlisle
+ * Date: Feb 23, 1994
+ *
+ */
+
+/* initialize the random number generator for a particular processor */
+void init_random(int myid);
+
+/* return a random number from 0 to range-1 */
+int gen_number(int range);
+
+/* return a random number in [-range+1,range-1] */
+int gen_signed_number(int range);
+
+/* Return 1, percent percent of the time and 0 otherwise */
+int check_percent(int percent);
