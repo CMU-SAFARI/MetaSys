@@ -1,0 +1,4 @@
+@set UPDATED 18 September 2018
+@set UPDATED-MONTH September 2018
+@set EDITION 0.10.0+dev
+@set VERSION 0.10.0+dev
