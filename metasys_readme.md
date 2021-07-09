@@ -1,3 +1,6 @@
+# Using MetaSys Library
+Please check our [streaming microbenchmark](https://github.com/CMU-SAFARI/MetaSys/blob/main/rocket-chip/emulator/progs/microbenchmarks/Array/stream-pk.cpp) as an example on how to integrate MetaSys into your application.
+
 # How to develop a new use case of MetaSys
 ## Describe prefetcher and challenges
 The prefetcher in the MetaSys system is a stride prefetcher that makes use of hints provided by the atom abstraction. The programmer conveys access pattern information of a data structure to the hardware via atoms using MetaSysLib. 
