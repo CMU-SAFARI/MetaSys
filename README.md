@@ -1,7 +1,7 @@
- Evaluation of the Expressive Memory Abstractions using Rocket Chip
+MetaSys
 ===========================================================================
 
-We refer the developers of the MetaSys repository to [metasys_readme.md](), where we describe our modifications to the existing rocket-chip code base, and present a walkthrough of an implementation of the prefetching use case described in our paper.
+We refer the developers of the MetaSys repository to [metasys_readme.md](https://github.com/CMU-SAFARI/MetaSys/blob/main/metasys_readme.md), where we describe our modifications to the existing rocket-chip code base, and present a walkthrough of an implementation of the prefetching use case described in our paper.
 
 For more details, please read our [preprint on arXiv](https://arxiv.org/abs/2105.08123).
 
