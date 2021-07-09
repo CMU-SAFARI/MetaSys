@@ -19,7 +19,10 @@ Please feel free to contact us or raise an issue in the repo in case you have an
 ## Cite MetaSys
 Please cite the following paper if you find MetaSys useful:
 
-N. Vijaykumar, A. Olgun, K. Kanellopoulos, N. Bostanci, H. Hassan, M. Lotfi, P. B. Gibbons, O. Mutlu, “MetaSys: A Practical Open-Source Metadata Management System to Implement and Evaluate Cross-Layer Optimizations,” arXiv:2105.08123, May 2021
+N. Vijaykumar, A. Olgun, K. Kanellopoulos, N. Bostanci, H. Hassan, M. Lotfi, P. B. Gibbons, O. Mutlu, “[MetaSys: A Practical Open-Source Metadata Management System to Implement and Evaluate Cross-Layer Optimizations](https://arxiv.org/pdf/2105.08123.pdf),” [arXiv:2105.08123](https://arxiv.org/abs/2105.08123), May 2021
+
+Link to the PDF: https://arxiv.org/pdf/2105.08123.pdf  
+Link to the abstract: https://arxiv.org/abs/2105.08123
 
 Below is bibtex format for citation.
 ```
