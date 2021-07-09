@@ -16,6 +16,23 @@ Please feel free to contact us in case you have any questions.
 * Ataberk Olgun (olgunataberk [at] gmail [dot] com)
 * Nisa Bostanci (nisabstnc [at] gmail [dot] com)
 
+## Cite MetaSys
+Please cite the following paper if you find MetaSys useful:
+
+N. Vijaykumar, A. Olgun, K. Kanellopoulos, N. Bostanci, H. Hassan, M. Lotfi, P. B. Gibbons, O. Mutlu, “MetaSys: A Practical Open-Source Metadata Management System to Implement and Evaluate Cross-Layer Optimizations,” arXiv:2105.08123, May 2021
+
+Below is bibtex format for citation.
+```
+@misc{vijaykumar2021metasys,
+      title={MetaSys: A Practical Open-Source Metadata Management System to Implement and Evaluate Cross-Layer Optimizations}, 
+      author={Nandita Vijaykumar and Ataberk Olgun and Konstantinos Kanellopoulos and Nisa Bostancı and Hasan Hassan and Mehrshad Lotfi and Phillip B. Gibbons and Onur Mutlu},
+      year={2021},
+      eprint={2105.08123},
+      archivePrefix={arXiv},
+      primaryClass={cs.AR}
+}
+```
+
 Rocket Chip on Zynq FPGAs
 =========================
 ### Warning: This repository is deprecated and does not track Rocket Chip master.
