@@ -5,9 +5,9 @@ We refer the developers of the MetaSys repository to [metasys_readme.md](https:/
 
 For more details, please read our [preprint on arXiv](https://arxiv.org/abs/2105.08123).
 
-To reproduce our design, follow the instructions in this README file below to generate the rocket-chip prototype on ZC706. You should use our version of riscv-tools to generate the toolchain (gcc, riscv-pk, etc.), which is included in this repository
+To reproduce our design, follow the instructions in this README file below to generate the rocket-chip prototype on ZC706. You should use our version of riscv-tools to generate the toolchain (gcc, riscv-pk, etc.), which is included in this repository.
 
-Please feel free to contact us in case you have any questions.
+Please feel free to contact us or raise an issue in the repo in case you have any questions or problems building the prototype.
 ## Acknowledgments & Contact
 
 * Nandita Vijaykumar
@@ -241,9 +241,7 @@ This step assumes that you have just generated the bitstream. Inside the Vivado 
 
 1) Select _File -> New -> Application Project_
 
-2) In the new window, type "FSBL" as the Project name, and ensure that the rest of the properties are correctly set (disregarding the greyed out _Location_ field):
-
-<img src="https://s3-us-west-1.amazonaws.com/riscv.org/fpga-zynq-guide/FSBL.png" width="400"/>
+2) In the new window, type "FSBL" as the Project name, and ensure that the rest of the properties are correctly set (disregarding the greyed out _Location_ field).
 
 3) Select _Next_, at which point you should be given a set of options. Select _Zynq FSBL_ and _Finish_.
 
@@ -275,8 +273,6 @@ Once you have done so select the dropdown next to _Partition type_ and select _b
 
 At the conclusion of this step, the _Add partition_ window will look something like:
 
-<img src="https://s3-us-west-1.amazonaws.com/riscv.org/fpga-zynq-guide/selectFSBL.png" width="400" />
-
 Click _OK_to return to the previous window.
 
 2) Once more, click _Add_. In the new _Add partition_ window, click _Browse_ and specify the following location:
@@ -290,10 +286,6 @@ Ensure that _Partition type_ is set to datafile and click _OK_.
 `$REPO/zybo/soft_build/u-boot.elf`
 
 Again, ensure that _Partition type_ is set to datafile and click _OK_.
-
-4) At this point, the window should match the following (click the image to zoom in):
-
-<a href="https://s3-us-west-1.amazonaws.com/riscv.org/fpga-zynq-guide/boot_image.png" target="_new"><img src="https://s3-us-west-1.amazonaws.com/riscv.org/fpga-zynq-guide/boot_image.png" width="400" /></a>
 
 Select _Create Image_. This will produce a `BOOT.bin` file in the `$REPO/zybo/deliver_output` directory.
 
