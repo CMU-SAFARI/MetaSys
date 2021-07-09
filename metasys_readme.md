@@ -1,13 +1,3 @@
-WIP README for MetaSys.
-
-# How to interact with the MetaSys Library
-TODO
-## How to perform static/dynamic atom creation
-TODO
-## How to map/unmap
-TODO
-## How to add  new functionalities for atoms
-TODO
 # How to develop a new use case of MetaSys
 ## Describe prefetcher and challenges
 The prefetcher in the MetaSys system is a stride prefetcher that makes use of hints provided by the atom abstraction. The programmer conveys access pattern information of a data structure to the hardware via atoms using MetaSysLib. 
@@ -53,9 +43,6 @@ You can now simulate this design as usual by navigating into `rocket-chip/emulat
 ## Forwarding Instruction to RoCC
 
 We use RISC-V's custom instructions to perform metadata management operations. A subset of these instructions are recognized as RoCC instructions and are transferred from the rocket core to the RoCC for execution after they are decoded. For more detail on how RoCC designs operate, we refer the reader to a copy of [Anuj Rao's RoCC Doc V2](https://docs.google.com/document/d/19KX8W5UqXbPGLwPhm5eyJKtzn7OQ7lo0C_p0PUlEg44/edit).
-
-## Changes in the riscv-toolchain - riscv - opcodes
-TODO
   
 ## Changes in the RoCC - FSM (Signals, States)
 Point to specific files and code of RoCC FSM. Give example
