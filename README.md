@@ -1,3 +1,21 @@
+ Evaluation of the Expressive Memory Abstractions using Rocket Chip
+===========================================================================
+
+We refer the developers of the MetaSys repository to [metasys_readme.md](), where we describe our modifications to the existing rocket-chip code base, and present a walkthrough of an implementation of the prefetching use case described in our paper.
+
+For more details, please read our [preprint on arXiv](https://arxiv.org/abs/2105.08123).
+
+To reproduce our design, follow the instructions in this README file below to generate the rocket-chip prototype on ZC706. You should use our version of riscv-tools to generate the toolchain (gcc, riscv-pk, etc.), which is included in this repository
+
+Please feel free to contact us in case you have any questions.
+## Acknowledgments & Contact
+
+* Nandita Vijaykumar
+* Mehrshad Lotfi
+* Konstantinos Kanellopoulos (konkanello [at] gmail [dot] com)
+* Ataberk Olgun (olgunataberk [at] gmail [dot] com)
+* Nisa Bostanci (nisabstnc [at] gmail [dot] com)
+
 Rocket Chip on Zynq FPGAs
 =========================
 ### Warning: This repository is deprecated and does not track Rocket Chip master.
@@ -481,138 +499,3 @@ In addition to those that [contributed](https://github.com/ucb-bar/rocket-chip#c
 - Deborah Soung
 - Andrew Waterman
 
- Evaluation of the Expressive Memory Abstractions using Rocket Chip
-===========================================================================
-
-For our evaluation, we modified the RoCC Accelerator that is tightly-coupled with the rocket-chip.
-
-RoCC supports the following operations:
-
-* map
-* unmap
-* activate
-* deactivate 
-
-Proxy Kernel (pk) handles the creation of Global Attribute and Private Attribute tables.
-
-For more details, please read the paper. 
-
-https://people.inf.ethz.ch/omutlu/pub/X-MEM_Expressive-Memory-for-Rich-Cross-Layer-Abstractions_isca18.pdf
-
-
-
-### Installing
-
-#### Build the riscv-tools ( Including the modified pk)
-
-Please check the README file under this link.
-
-https://gitlab.inf.ethz.ch/kanellok/xmem-rocket/tree/master/riscv-tools
-
-
-#### Build rocket-chip ( Emulator or Verilog)
-
-Please check the README file under this link.
-
-https://gitlab.inf.ethz.ch/kanellok/xmem-rocket/tree/master/fpga-zynq/rocket-chip
-
-
-#### Build benchmarks
-
-```C++
-cd ./Benchmark_dir
-qmake
-make
-
-```
-
-## Hot Files
-
-You can find our modifications for the rocket-chip in these files:
-
-### Modified RoCC
-
-https://gitlab.inf.ethz.ch/kanellok/xmem-rocket/blob/master/fpga-zynq/rocket-chip/src/main/scala/tile/Accelerator.scala
-
-### XMem Library
-
-https://gitlab.inf.ethz.ch/kanellok/xmem-rocket/tree/master/lib/XMemLib
-
-### Modified PK
-
-https://gitlab.inf.ethz.ch/kanellok/xmem-rocket/tree/master/riscv-tools/riscv-pk/pk
-
-
-## Usage
-
-### Use of Atom Library
-
-```C++
- Atom a(pointer_to_data_structure)
- a.map(size_of_structure)
- a.activate()
- 
- /* Code */
- 
- a.unmap(size_of_structure)
- a.deactivate()
-
-```
-### Use of Hardware Performance Counters
-
-
-```C++
-HardwarePerformanceMonitor *hw1 = new HardwarePerformanceMonitor();
-HardwarePerformanceMonitor *hw2 = new HardwarePerformanceMonitor();
-
-hw1->initiate();
-
-/* Code to measure */
-
-hw2->initiate();
-hw2->minus(hw1);
-
-
-```
-
-https://gitlab.inf.ethz.ch/kanellok/xmem-rocket/blob/master/lib/PerfCounterLib/hardwareperformancemonitor.h
-
-Here, you can check the list of performance events.
-
-### Use of the PK
-
-Instead of creating an atom segment, to make things simpler, we pass an atom file to the pk.
-The atom file contains info about all the atoms of our application.
-
-```
-./fesvr pk app atom_file
-
-```
-
-#### Atom file structure
-```
-1. n  = number of atoms
-2. property of atom 0 
-3. property of atom 1
-.
-.
-.
-n+1. property of atom n
-
-```
-
-#### Execution using atom_file
-```
-
-./fesvr pk app atom_file
-
-```
-
-
-## Acknowledgments
-
-* Nandita Vijaykumar
-* Mehrshad Lotfi
-* Konstantinos Kanellopoulos
-* Ataberk Olgun
-* Nisa Bostanci 
