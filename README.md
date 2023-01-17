@@ -3,7 +3,7 @@ MetaSys
 
 We refer the developers of the MetaSys repository to [metasys_readme.md](https://github.com/CMU-SAFARI/MetaSys/blob/main/metasys_readme.md), where we describe our modifications to the existing rocket-chip code base, and present a walkthrough of an implementation of the prefetching use case described in our paper.
 
-For more details, please read our [preprint on arXiv](https://arxiv.org/abs/2105.08123).
+For more details, please read our [full paper published in ACM TACO](https://dl.acm.org/doi/full/10.1145/3505250). This paper received one of the three Best Paper Awards at HiPEAC 2023.
 
 To reproduce our design, follow the instructions in this README file below to generate the rocket-chip prototype on ZC706. You should use our version of riscv-tools to generate the toolchain (gcc, riscv-pk, etc.), which is included in this repository.
 
@@ -19,20 +19,18 @@ Please feel free to contact us or raise an issue in the repo in case you have an
 ## Cite MetaSys
 Please cite the following paper if you find MetaSys useful:
 
-N. Vijaykumar, A. Olgun, K. Kanellopoulos, N. Bostanci, H. Hassan, M. Lotfi, P. B. Gibbons, O. Mutlu, “[MetaSys: A Practical Open-Source Metadata Management System to Implement and Evaluate Cross-Layer Optimizations](https://arxiv.org/pdf/2105.08123.pdf),” [arXiv:2105.08123](https://arxiv.org/abs/2105.08123), May 2021
+N. Vijaykumar, A. Olgun, K. Kanellopoulos, N. Bostanci, H. Hassan, M. Lotfi, P. B. Gibbons, O. Mutlu, “[MetaSys: A Practical Open-Source Metadata Management System to Implement and Evaluate Cross-Layer Optimizations](https://dl.acm.org/doi/full/10.1145/3505250),” ACM TACO, 2022.
 
-Link to the PDF: https://arxiv.org/pdf/2105.08123.pdf  
-Link to the abstract: https://arxiv.org/abs/2105.08123
+Link to the PDF on arXiv: https://arxiv.org/pdf/2105.08123.pdf  
+Link to the abstract on arXiv: https://arxiv.org/abs/2105.08123
 
 Below is bibtex format for citation.
 ```
-@misc{vijaykumar2021metasys,
+@article{vijaykumar2021metasys,
       title={MetaSys: A Practical Open-Source Metadata Management System to Implement and Evaluate Cross-Layer Optimizations}, 
       author={Nandita Vijaykumar and Ataberk Olgun and Konstantinos Kanellopoulos and Nisa Bostancı and Hasan Hassan and Mehrshad Lotfi and Phillip B. Gibbons and Onur Mutlu},
-      year={2021},
-      eprint={2105.08123},
-      archivePrefix={arXiv},
-      primaryClass={cs.AR}
+      year={2022},
+      journal={ACM TACO}
 }
 ```
 
