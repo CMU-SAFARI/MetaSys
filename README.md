@@ -1,20 +1,9 @@
 MetaSys
 ===========================================================================
 
-We refer the developers of the MetaSys repository to [metasys_readme.md](https://github.com/CMU-SAFARI/MetaSys/blob/main/metasys_readme.md), where we describe our modifications to the existing rocket-chip code base, and present a walkthrough of an implementation of the prefetching use case described in our paper.
+Metasys is the first open-source FPGA-based infrastructure with a prototype in a RISC-V core, to enable the rapid implementation and evaluation of a wide range of cross-layer software/hardware cooperative techniques techniques in real hardware. This repository contains all sources required to build MetaSys and develop its prototype on the Zedboard FPGA boards.
 
 For more details, please read our [full paper published in ACM TACO](https://dl.acm.org/doi/full/10.1145/3505250). This paper received one of the three Best Paper Awards at HiPEAC 2023.
-
-To reproduce our design, follow the instructions in this README file below to generate the rocket-chip prototype on ZC706. You should use our version of riscv-tools to generate the toolchain (gcc, riscv-pk, etc.), which is included in this repository.
-
-Please feel free to contact us or raise an issue in the repo in case you have any questions or problems building the prototype.
-## Acknowledgments & Contact
-
-* Nandita Vijaykumar
-* Mehrshad Lotfi
-* Konstantinos Kanellopoulos (konkanello [at] gmail [dot] com)
-* Ataberk Olgun (olgunataberk [at] gmail [dot] com)
-* Nisa Bostanci (nisabstnc [at] gmail [dot] com)
 
 ## Cite MetaSys
 Please cite the following paper if you find MetaSys useful:
@@ -33,6 +22,12 @@ Below is bibtex format for citation.
       journal={ACM TACO}
 }
 ```
+
+## Building a MetaSys Prototype and Evaluating New Case Studies
+
+To reproduce our design, follow the instructions in this README file below to generate the rocket-chip prototype on ZC706. You should use our version of riscv-tools to generate the toolchain (gcc, riscv-pk, etc.), which is included in this repository.
+
+[MetaSys Readme](https://github.com/CMU-SAFARI/MetaSys/blob/main/metasys_readme.md) contains instructions on how to extend the infrastructure with more case studies and how to use the software library provided with MetaSys.
 
 Rocket Chip on Zynq FPGAs
 =========================
@@ -497,15 +492,12 @@ When testing on spike, run spike with the `--isa=RV64IMA` flag.
 
 If [pk](https://github.com/riscv/riscv-pk) does not work, make sure it is being built using this version of the toolchain, since it is specifically generated to not have floating point instructions. Also make sure any binaries you want to run on the Zybo are compiled using this toolchain.
 
-<a name="ack"></a> Acknowledgments 
----------------
-In addition to those that [contributed](https://github.com/ucb-bar/rocket-chip#contributors) to rocket chip, this repository is based on internal repositories contributed by:
+## Acknowledgments & Contact
 
-- Rimas Avizienis
-- Jonathan Bachrach
-- David Biancolin
-- Scott Beamer
-- Sagar Karandikar
-- Deborah Soung
-- Andrew Waterman
+Please feel free to contact us or raise an issue in the repo in case you have any questions or problems building the prototype.
 
+* Nandita Vijaykumar
+* Mehrshad Lotfi
+* Konstantinos Kanellopoulos (konkanello [at] gmail [dot] com)
+* Ataberk Olgun (olgunataberk [at] gmail [dot] com)
+* Nisa Bostanci (nisabstnc [at] gmail [dot] com)
